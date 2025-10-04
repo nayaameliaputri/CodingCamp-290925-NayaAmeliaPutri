@@ -22,7 +22,7 @@ function renderTodos() {
   }
 
   if (filteredTodos.length === 0) {
-    todoBody.innerHTML = <tr><td colspan="4">No task found</td></tr>;
+    todoBody.innerHTML = `<tr><td colspan="4">No task found</td></tr>`;
     return;
   }
 
@@ -32,7 +32,7 @@ function renderTodos() {
     row.innerHTML = `
       <td>${todo.task}</td>
       <td>${todo.date}</td>
-      <td>${todo.done ? "â Done" : "â Pending"}</td>
+      <td>${todo.done ? "✅ Done" : "❌ Pending"}</td>
       <td>
         <button onclick="toggleStatus(${index})">Toggle</button>
         <button onclick="deleteTask(${index})">Delete</button>
@@ -104,10 +104,10 @@ const playPauseBtn = document.getElementById("playPauseBtn");
 playPauseBtn.addEventListener("click", () => {
   if (bgAudio.paused) {
     bgAudio.play();
-    playPauseBtn.textContent = "â¸ï¸ Pause Music";
+    playPauseBtn.textContent = "⏸️ Pause Music";
   } else {
     bgAudio.pause();
-    playPauseBtn.textContent = "â¶ï¸ Play Music";
+    playPauseBtn.textContent = "▶️ Play Music";
   }
 });
 
