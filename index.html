@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List App</h1>
+
+    <div class="audio-control">
+    <audio id="bgAudio" loop>
+        <source src="audio/backsound.mp3" type="audio/mpeg">
+    </audio>
+    <button id="playPauseBtn">▶️ Play Music</button>
+    </div>
+
+    <div class="form">
+      <input type="text" id="taskInput" placeholder="Enter your task" />
+      <input type="date" id="dateInput" />
+      <button id="addBtn">Add</button>
+      <button id="deleteAllBtn">Delete All</button>
+      <select id="filterSelect">
+        <option value="all">All</option>
+        <option value="done">Done</option>
+        <option value="pending">Pending</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="todoBody"></tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
